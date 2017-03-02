@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mag-66-Mph">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu Controller-->
+        <scene sceneID="5fJ-yc-rik">
+            <objects>
+                <viewController id="mag-66-Mph" customClass="MainMenuController" customModule="SeatingChartIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dw3-qx-Gxy"/>
+                        <viewControllerLayoutGuide type="bottom" id="sh1-YD-piw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zd9-Ul-CGE">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="File Selector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nv-hN-PW0">
+                                <frame key="frameInset" minX="87" minY="532" width="126" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-QG-wjO">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jg7-QG-wjO" secondAttribute="height" multiplier="3:2" id="G7E-lx-1k5"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seating Chart" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-uQ-ltS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="3sz-YR-WbW"/>
+                                    <constraint firstAttribute="width" constant="471" id="qCO-9M-f4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="72"/>
+                                <color key="textColor" red="1" green="0.020419843166532781" blue="0.061826483969027346" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="800" height="200"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfb-uQ-ltS" firstAttribute="centerX" secondItem="Zd9-Ul-CGE" secondAttribute="centerX" constant="100" id="3UT-dH-3fa"/>
+                            <constraint firstItem="Jg7-QG-wjO" firstAttribute="top" secondItem="1nv-hN-PW0" secondAttribute="bottom" id="4Jd-z9-nJe"/>
+                            <constraint firstItem="wfb-uQ-ltS" firstAttribute="top" secondItem="Dw3-qx-Gxy" secondAttribute="bottom" constant="96" id="52r-CC-Gli"/>
+                            <constraint firstItem="Jg7-QG-wjO" firstAttribute="leading" secondItem="Zd9-Ul-CGE" secondAttribute="leadingMargin" constant="-20" id="cxM-9S-8AF"/>
+                            <constraint firstItem="sh1-YD-piw" firstAttribute="top" secondItem="Jg7-QG-wjO" secondAttribute="bottom" id="eBH-br-P81"/>
+                            <constraint firstItem="Jg7-QG-wjO" firstAttribute="width" secondItem="Zd9-Ul-CGE" secondAttribute="height" multiplier="25:64" id="x6y-ty-z7b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Jg7-QG-wjO" id="tES-TE-LcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhz-sY-cTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.75" y="-889.0625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SeatingChartIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tbE-0n-iqm"/>
+                        <viewControllerLayoutGuide type="bottom" id="rkf-rh-NU5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.75" y="-10.666666666666668"/>
+        </scene>
+    </scenes>
+</document>
